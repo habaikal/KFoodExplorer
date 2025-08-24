@@ -1,26 +1,30 @@
 # KFoodExplorer 🍜
 
-### 프로젝트 소개
-KFoodExplorer는 다양한 한국 음식을 탐색하고, 투표하며, 레시피를 확인할 수 있는 웹 애플리케이션입니다. 사용자들은 좋아하는 음식에 투표하고, 먹고 싶은 음식을 등록하여 다른 사람들의 취향을 공유할 수 있습니다.
+### Project Introduction
+KFoodExplorer is a web application that allows users to explore, vote on, and check recipes for various Korean foods. Users can vote for their favorite dishes and share their favorites by registering their favorites.
 
-### 주요 기능
-- **음식 목록:** 다양한 한국 음식의 사진, 짧은 설명, 자세한 정보 및 레시피를 제공합니다.
-- **실시간 랭킹:** 음식별 투표 수를 바탕으로 실시간 인기 순위를 차트로 보여줍니다.
-- **위시리스트:** 사용자가 먹고 싶은 음식을 입력하면, 가장 많이 언급된 음식을 파이 차트로 보여줍니다.
-- **상세 페이지:** 음식 카드를 클릭하면 상세 정보, 레시피, 그리고 투표 기능이 있는 페이지로 이동합니다.
+### Key Features
+- **Food List:** Provides photos, short descriptions, detailed information, and recipes for various Korean foods.
+- **Real-Time Ranking:** Displays real-time popularity rankings in a chart based on the number of votes for each dish.
+- **Wish List:** When users enter their desired food, a pie chart displays the most frequently mentioned dishes.
+- **Detail Page:** Clicking on a food card takes you to a page with detailed information, recipes, and a voting feature.
 
-### 사용 기술
-- **HTML5:** 웹 페이지의 구조를 구성합니다.
-- **CSS3:** 디자인과 레이아웃을 담당합니다. (Tailwind CSS 포함)
-- **JavaScript (ES6+):** 동적 기능과 사용자 상호작용을 처리합니다.
-- **Chart.js:** 인기 순위와 위시리스트 차트를 생성합니다.
+### Technologies Used
+- **HTML5:** Structures the web page.
+- **CSS3:** Designs and layout (including Tailwind CSS).
+- **JavaScript (ES6+):** Handles dynamic features and user interaction.
+- **Chart.js:** Generates popularity ranking and wish list charts.
 
-### 배포
-이 프로젝트는 **Netlify** 또는 **Vercel**을 통해 자동 배포됩니다.
+### Deployment
+This project is automatically deployed via **Netlify** or **Vercel**.
 
-### 시작하기
-1. 프로젝트를 로컬에 클론합니다: `git clone [프로젝트 URL]`
-2. `index.html` 파일을 웹 브라우저에서 엽니다.
+### Getting Started
+1. Clone the project locally: `git clone [project URL]`
+2. Open the `index.html` file in a web browser.
 
-### 기여
-버그 보고, 기능 제안 등 어떤 기여든 환영합니다.
+### Contribute
+All contributions, including bug reports and feature suggestions, are welcome.
+
+### Copyright
+Copyright (c) 2025 Habaikal and KEM. All rights reserved.
+This app and its source code are protected by copyright laws. Unauthorized reproduction or distribution of the software, or any portion of it, may result in severe civil and criminal penalties.
