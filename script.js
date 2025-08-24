@@ -2,7 +2,7 @@ const foods = [
     {
         id: 'kimchi',
         name: 'Kimchi',
-        image: 'images/kimchi.png',
+        image: 'images/Kimchi.png',
         shortDesc: 'Fermented cabbage with spicy seasoning, a staple in Korean meals.',
         longDesc: 'Kimchi is a traditional Korean side dish made from fermented vegetables, primarily napa cabbage and Korean radishes, with a variety of seasonings including chili pepper powder, garlic, ginger, and jeotgal (fermented seafood). It is known for its sour, spicy, and umami flavors.',
         recipe: 'Ingredients: 1 napa cabbage, 1/2 cup salt, 1/4 cup chili powder, 5 cloves garlic, 1 tbsp ginger, 2 tbsp fish sauce.\nSteps:\n1. Salt cabbage and let sit for 2 hours.\n2. Rinse and drain.\n3. Mix paste with chili, garlic, etc.\n4. Coat cabbage and ferment for 1-5 days.'
