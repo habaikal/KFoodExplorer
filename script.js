@@ -1,0 +1,308 @@
+const foods = [
+    {
+        id: 'kimchi',
+        name: 'Kimchi',
+        image: 'images/kimchi.png',
+        shortDesc: 'Fermented cabbage with spicy seasoning, a staple in Korean meals.',
+        longDesc: 'Kimchi is a traditional Korean side dish made from fermented vegetables, primarily napa cabbage and Korean radishes, with a variety of seasonings including chili pepper powder, garlic, ginger, and jeotgal (fermented seafood). It is known for its sour, spicy, and umami flavors.',
+        recipe: 'Ingredients: 1 napa cabbage, 1/2 cup salt, 1/4 cup chili powder, 5 cloves garlic, 1 tbsp ginger, 2 tbsp fish sauce.\nSteps:\n1. Salt cabbage and let sit for 2 hours.\n2. Rinse and drain.\n3. Mix paste with chili, garlic, etc.\n4. Coat cabbage and ferment for 1-5 days.'
+    },
+    {
+        id: 'bulgogi',
+        name: 'Bulgogi',
+        image: 'images/Bulgogi.png',
+        shortDesc: 'Marinated grilled beef, sweet and savory.',
+        longDesc: 'Bulgogi, literally meaning "fire meat," is thinly sliced beef marinated in a mixture of soy sauce, sugar, sesame oil, garlic, and other ingredients, then grilled or pan-fried.',
+        recipe: 'Ingredients: 500g beef, 1/4 cup soy sauce, 2 tbsp sugar, 1 tbsp sesame oil, garlic.\nSteps:\n1. Marinate beef for 1 hour.\n2. Grill over high heat.\n3. Serve with rice.'
+    },
+    {
+        id: 'bibimbap',
+        name: 'Bibimbap',
+        image: 'images/Bibimbap.png',
+        shortDesc: 'Mixed rice with vegetables, meat, and egg.',
+        longDesc: 'Bibimbap is a bowl of warm white rice topped with namul (sautéed and seasoned vegetables), gochujang (chili pepper paste), soy sauce, and often a raw or fried egg and sliced meat.',
+        recipe: 'Ingredients: Rice, assorted veggies, beef, egg, gochujang.\nSteps:\n1. Cook rice.\n2. Sauté veggies.\n3. Fry egg.\n4. Mix all with sauce.'
+    },
+    {
+        id: 'samgyeopsal',
+        name: 'Samgyeopsal',
+        image: 'images/Samgyeopsal.png',
+        shortDesc: 'Grilled pork belly, enjoyed with wraps.',
+        longDesc: 'Samgyeopsal is unmarinated pork belly slices grilled at the table and wrapped in lettuce with garlic, ssamjang, and other sides.',
+        recipe: 'Ingredients: Pork belly, lettuce, garlic, ssamjang.\nSteps:\n1. Grill pork.\n2. Wrap in lettuce with sides.'
+    },
+    {
+        id: 'samgyetang',
+        name: 'Samgyetang',
+        image: 'images/Samgyetang.png',
+        shortDesc: 'Ginseng chicken soup, nourishing and hearty.',
+        longDesc: 'Samgyetang is a whole young chicken stuffed with ginseng, garlic, rice, and jujubes, boiled in a flavorful broth.',
+        recipe: 'Ingredients: Chicken, ginseng, rice, garlic.\nSteps:\n1. Stuff chicken.\n2. Boil for 1 hour.'
+    },
+    {
+        id: 'japchae',
+        name: 'Japchae',
+        image: 'images/Japchae.png',
+        shortDesc: 'Stir-fried glass noodles with vegetables.',
+        longDesc: 'Japchae is a traditional Korean dish made with chewy glass noodles stir-fried together with assorted vegetables, beef, and seasoned with soy sauce and sesame oil. It is known for its savory and slightly sweet flavor.',
+        recipe: 'Ingredients: Glass noodles (dangmyeon), beef, assorted vegetables (carrot, spinach, onions, mushrooms), soy sauce, sesame oil, sugar.\nSteps:\n1. Soak and boil the glass noodles.\n2. Stir-fry the vegetables and beef separately.\n3. Mix noodles with the stir-fried ingredients.\n4. Season with soy sauce, sesame oil, and sugar, then serve.'
+    },
+    {
+        id: 'naengmyeon',
+        name: 'Naengmyeon',
+        image: 'images/Naengmyeon.png',
+        shortDesc: 'Cold buckwheat noodles in chilled broth.',
+        longDesc: 'Naengmyeon features chewy buckwheat noodles served in a tangy, cold beef broth with toppings like sliced beef, pear, and egg.',
+        recipe: 'Ingredients: Buckwheat noodles, beef broth, toppings.\nSteps:\n1. Cook noodles.\n2. Chill broth.\n3. Assemble.'
+    },
+    {
+        id: 'kimchi-jjigae',
+        name: 'Kimchi Jjigae',
+        image: 'images/Kimchi Jjigae.png',
+        shortDesc: 'Spicy kimchi stew with tofu and pork.',
+        longDesc: 'Kimchi jjigae is a hearty stew made with aged kimchi, tofu, pork, and vegetables, boiled until flavors meld.',
+        recipe: 'Ingredients: Kimchi, tofu, pork.\nSteps:\n1. Sauté pork.\n2. Add kimchi and boil.'
+    },
+    {
+        id: 'doenjang-jjigae',
+        name: 'Doenjang Jjigae',
+        image: 'images/Doenjang Jjigae.png',
+        shortDesc: 'Fermented soybean paste stew.',
+        longDesc: 'Doenjang jjigae is a comforting stew featuring doenjang (soybean paste), vegetables, tofu, and sometimes meat or seafood.',
+        recipe: 'Ingredients: Doenjang, veggies, tofu.\nSteps:\n1. Boil with paste.\n2. Add ingredients.'
+    },
+    {
+        id: 'k-fried-chicken',
+        name: 'Korean Fried Chicken',
+        image: 'images/Korean Fried Chicken.png',
+        shortDesc: 'Crispy chicken with unique sauces.',
+        longDesc: 'Korean fried chicken is double-fried for extra crispiness and coated in sweet, spicy, or soy garlic sauces.',
+        recipe: 'Ingredients: Chicken, flour, sauce.\nSteps:\n1. Batter and fry twice.\n2. Coat in sauce.'
+    },
+    {
+        id: 'gimbap',
+        name: 'Gimbap',
+        image: 'images/Gimbap.png',
+        shortDesc: 'Seaweed rice rolls with fillings.',
+        longDesc: 'Gimbap is rice seasoned with sesame oil, rolled in seaweed with vegetables, meat, and pickled radish.',
+        recipe: 'Ingredients: Rice, seaweed, fillings.\nSteps:\n1. Spread rice on seaweed.\n2. Roll and slice.'
+    },
+    {
+        id: 'tteokbokki',
+        name: 'Tteokbokki',
+        image: 'images/Tteokbokki.png',
+        shortDesc: 'Spicy rice cakes street food.',
+        longDesc: 'Tteokbokki is chewy rice cakes stir-fried in a spicy gochujang sauce with fish cakes and vegetables.',
+        recipe: 'Ingredients: Rice cakes, gochujang, fish cakes.\nSteps:\n1. Boil rice cakes.\n2. Add sauce and simmer.'
+    }
+];
+
+let votes = JSON.parse(localStorage.getItem('votes')) || {};
+foods.forEach(food => {
+    if (!(food.id in votes)) {
+        votes[food.id] = { count: 0, voted: false };
+    }
+});
+localStorage.setItem('votes', JSON.stringify(votes));
+
+let wishList = JSON.parse(localStorage.getItem('wishList')) || {};
+let rankingChart = null;
+let wishChart = null;
+
+function updateRanking() {
+    const sortedFoods = foods.slice().sort((a, b) => votes[b.id].count - votes[a.id].count);
+    const labels = sortedFoods.map(food => food.name);
+    const data = sortedFoods.map(food => votes[food.id].count);
+    const totalVotes = data.reduce((sum, count) => sum + count, 0);
+    const maxY = Math.max(...data, 5);
+    const percentages = data.map(count => totalVotes > 0 ? ((count / totalVotes) * 100).toFixed(1) : '0.0');
+
+    const ctx = document.getElementById('ranking-chart').getContext('2d');
+
+    if (rankingChart) {
+        rankingChart.destroy();
+    }
+
+    rankingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Votes',
+                data: data,
+                backgroundColor: '#b22222',
+                borderColor: '#00416a',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: maxY,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            },
+            plugins: {
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    formatter: (value, context) => `${percentages[context.dataIndex]}%`,
+                    color: '#2b2b2b',
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        const value = data.datasets[0].data[tooltipItem.index];
+                        const percentage = percentages[tooltipItem.index];
+                        return `${data.labels[tooltipItem.index]}: ${value} votes (${percentage}%)`;
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 30,
+                    bottom: 10
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
+
+function updateWishChart() {
+    const sortedWishes = Object.entries(wishList)
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count);
+    const top5 = sortedWishes.slice(0, 5);
+    const othersCount = sortedWishes.slice(5).reduce((sum, item) => sum + item.count, 0);
+    const labels = top5.map(item => item.name).concat(othersCount > 0 ? ['Others'] : []);
+    const data = top5.map(item => item.count).concat(othersCount > 0 ? [othersCount] : []);
+    const ctx = document.getElementById('wish-chart').getContext('2d');
+
+    if (wishChart) {
+        wishChart.destroy();
+    }
+
+    wishChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Wish List',
+                data: data,
+                backgroundColor: [
+                    '#b22222',
+                    '#d9a441',
+                    '#35524a',
+                    '#00416a',
+                    '#f4e1c1',
+                    '#4a2f27'
+                ],
+                borderColor: '#2b2b2b',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 10,
+                    bottom: 10
+                }
+            }
+        }
+    });
+}
+
+function renderMainPage() {
+    const main = document.getElementById('main-page').querySelector('.grid');
+    main.innerHTML = '';
+    foods.forEach(food => {
+        const card = document.createElement('div');
+        card.className = 'card-bg p-4 rounded-lg shadow-md cursor-pointer card-hover transition-colors';
+        card.innerHTML = `
+            <img src="${food.image}" alt="${food.name}" class="w-full h-40 object-cover rounded-md mb-2">
+            <h3 class="text-xl font-bold point-text-red">${food.name}</h3>
+            <p class="text-[#4a2f27]">${food.shortDesc}</p>
+        `;
+        card.addEventListener('click', () => showDetail(food));
+        main.appendChild(card);
+    });
+}
+
+function showDetail(food) {
+    document.getElementById('main-page').classList.add('hidden');
+    document.getElementById('detail-page').classList.remove('hidden');
+    const content = document.getElementById('detail-content');
+    const voted = votes[food.id].voted;
+
+    const recipeParts = food.recipe.split('\n');
+    let ingredients = '';
+    let steps = '';
+    if (recipeParts[0].startsWith('Ingredients:')) {
+        ingredients = recipeParts[0].replace('Ingredients: ', '');
+        steps = recipeParts.slice(2).map(step => `<li class="text-[#4a2f27]">${step}</li>`).join('');
+    }
+
+    content.innerHTML = `
+        <img src="${food.image}" alt="${food.name}" class="w-full h-64 object-cover rounded-md mb-4">
+        <h2 class="text-2xl font-bold point-text-blue mb-2">${food.name}</h2>
+        <p class="text-[#2b2b2b] mb-4">${food.longDesc}</p>
+        <h3 class="text-xl font-semibold accent-yellow mb-2">Ingredients</h3>
+        <p class="text-[#4a2f27] mb-4">${ingredients}</p>
+        <h3 class="text-xl font-semibold accent-yellow mb-2">Steps</h3>
+        <ol class="list-decimal pl-6 mb-4">
+            ${steps}
+        </ol>
+        <button id="vote-btn" class="btn-primary py-2 px-4 rounded ${voted ? 'opacity-50 cursor-not-allowed' : ''}" ${voted ? 'disabled' : ''}>
+            Vote for this! (Current: ${votes[food.id].count})
+        </button>
+    `;
+    if (!voted) {
+        document.getElementById('vote-btn').addEventListener('click', () => {
+            votes[food.id].count++;
+            votes[food.id].voted = true;
+            localStorage.setItem('votes', JSON.stringify(votes));
+            updateRanking();
+            showDetail(food);
+        });
+    }
+}
+
+document.getElementById('back-btn').addEventListener('click', () => {
+    document.getElementById('detail-page').classList.add('hidden');
+    document.getElementById('main-page').classList.remove('hidden');
+    updateRanking();
+    updateWishChart();
+});
+
+document.getElementById('wish-submit').addEventListener('click', () => {
+    const input = document.getElementById('wish-input');
+    const dishName = input.value.trim();
+    if (dishName) {
+        wishList[dishName] = (wishList[dishName] || 0) + 1;
+        localStorage.setItem('wishList', JSON.stringify(wishList));
+        input.value = '';
+        updateWishChart();
+    }
+});
+
+// Load Chart.js DataLabels plugin and initialize app
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2';
+script.onload = () => {
+    renderMainPage();
+    updateRanking();
+    updateWishChart();
+};
+document.head.appendChild(script);
